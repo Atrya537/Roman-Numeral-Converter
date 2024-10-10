@@ -16,7 +16,8 @@ div {
 h1,
 #input-container,
 #convert-btn,
-#output-container {
+#output-container,
+#number {
   color: white;
 }
 
