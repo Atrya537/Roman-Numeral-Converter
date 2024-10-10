@@ -39,10 +39,13 @@ const convert = (num) => {
   let result = "";
 
   // Iterate through map and add characters while subtracting from current number
-  for (let char in romanNumeralMap) {
-    if (currNum >= romanNumeralMap[i]) {
-      currNum -= romanNumeralMap[i];
-      result += char;
+  while (currNum > 0) {
+    for (let i in romanNumeralMap) {
+      if (currNum >= romanNumeralMap[i]) {
+        currNum -= romanNumeralMap[i];
+        result += i;
+        break;
+      }
     }
   }
   return result;
